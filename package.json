@@ -1,0 +1,56 @@
+{
+  "name": "magwai-test",
+  "version": "1.0.0",
+  "description": "Тестовое задание",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.0.0",
+    "autoprefixer": "10.4.0",
+    "browser-sync": "2.27.10",
+    "gulp": "4.0.2",
+    "gulp-less": "5.0.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.1",
+    "postcss": "8.3.11",
+    "stylelint": "13.13.1",
+    "stylelint-config-htmlacademy": "0.1.11",
+    "eslint": "8.15.0",
+    "eslint-config-htmlacademy": "5.1.2"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "lint": "npm run editorconfig && npm run stylelint && eslint js/",
+    "build": "gulp styles",
+    "start": "gulp"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all",
+    "not < 0.25%"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/less/**/*.less"
+  ],
+  "engines": {
+    "node": "^16"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ierixorn/magwai-test.git"
+  },
+  "keywords": [],
+  "author": "Виталий В.В.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ierixorn/magwai-test/issues"
+  },
+  "homepage": "https://github.com/Ierixorn/magwai-test#readme"
+}

@@ -1,0 +1,32 @@
+.pagination-list {
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.pagination-list__item:not(:last-child) {
+  margin-right: 33px;
+}
+
+.pagination-list__link span {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+  }
+}
+
+.pagination-list__link::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: @second-background-color;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}

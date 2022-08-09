@@ -1,0 +1,32 @@
+.user-buttons {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.user-buttons__phone-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 73px;
+  height: 60px;
+  margin-right: 31px;
+  transform: @main-skewX;
+  border: 1px solid @five-color;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 31px;
+  }
+}
+
+.user-buttons__phone-button svg {
+  display: inline-block;
+  transform: @second-skewX;
+}

@@ -1,0 +1,30 @@
+.cards-section__wrapper {
+  .mixin-phone-container();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    .mixin-table-container();
+  }
+
+  @media (min-width: @desktop-width) {
+    .mixin-desktop-container();
+  }
+}
+
+.cards-section__title {
+  margin-left: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 100px;
+  }
+}
+
+.cards-section__list {
+  .mixin-list-normalize();
+}

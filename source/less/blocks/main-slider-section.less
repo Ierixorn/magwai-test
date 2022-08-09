@@ -1,0 +1,22 @@
+.main-slider-section {
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+  }
+}
+
+.main-slider__news-list {
+  .mixin-list-normalize();
+}
+
+.main-slider-section__pagination-list {
+  .mixin-list-normalize();
+  margin-left: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 60px;
+  }
+}

@@ -1,0 +1,26 @@
+.toggle-style {
+  .mixin-toggle-style();
+  position: relative;
+  width: 30px;
+  height: 3px;
+
+  &::before {
+    .mixin-toggle-style();
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 16px;
+    height: 3px;
+  }
+
+  &::after {
+    .mixin-toggle-style();
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 22px;
+    height: 3px;
+  }
+}

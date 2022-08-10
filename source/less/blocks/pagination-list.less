@@ -1,13 +1,20 @@
 .pagination-list {
   display: flex;
 
+  @media (max-width: @mobile-width-only) {
+    justify-content: space-between;
+  }
+
   @media (min-width: @tablet-width) {
     flex-direction: column;
+    direction: rtl;
   }
 }
 
 .pagination-list__item:not(:last-child) {
-  margin-right: 33px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 15px;
+  }
 }
 
 .pagination-list__link span {
@@ -18,15 +25,23 @@
   }
 }
 
-.pagination-list__link::before {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: @second-background-color;
+.pagination-list__link {
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: fade(@primary-color, 50%);
 
-  @media (min-width: @tablet-width) {
-    display: none;
+  &::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: @second-background-color;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }

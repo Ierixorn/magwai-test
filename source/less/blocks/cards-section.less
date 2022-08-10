@@ -1,6 +1,7 @@
 .cards-section__wrapper {
   .mixin-phone-container();
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -13,18 +14,16 @@
   }
 }
 
-.cards-section__title {
-  margin-left: 25px;
-
-  @media (min-width: @tablet-width) {
-    margin-left: 40px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 100px;
-  }
-}
-
 .cards-section__list {
   .mixin-list-normalize();
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
 }
+
+.cards-section__title {
+  align-self: flex-start;
+}
+

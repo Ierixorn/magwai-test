@@ -1,10 +1,28 @@
 .main-slider__item--close {
   display: none;
+
+  @media (max-width: @tablet-width) {
+    position: relative;
+  }
 }
 
-.main-slider__pagination-list {
+.main-slider__pagination {
   .mixin-list-normalize();
-  width: 100px;
-  margin-left: auto;
-  margin-right: auto;
+
+  @media (max-width: @mobile-width-only) {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 223px;
+    right: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: -423px;
+    right: 100px;
+  }
 }

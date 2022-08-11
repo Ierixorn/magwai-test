@@ -1,11 +1,49 @@
 .main-footer__wrapper {
   .mixin-phone-container();
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 320px;
+    height: 1px;
+    background-color: @second-background-color;
+
+    @media (min-width: @tablet-width) {
+      width: 688px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 1720px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     .mixin-table-container();
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: flex-end;
   }
 
   @media (min-width: @desktop-width) {
     .mixin-desktop-container();
   }
+}
+
+.main-footer__inner-wrapper {
+  text-align: center;
+}
+
+.main-footer__logo {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.main-footer__description {
+  margin: 0;
 }

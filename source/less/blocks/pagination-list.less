@@ -32,17 +32,21 @@
   text-transform: uppercase;
   color: fade(@primary-color, 50%);
 
-  &::before {
-    content: "";
-    display: block;
-    width: 15px;
-    height: 15px;
-    margin-top: -23px;
-    border-radius: 50%;
-    background-color: @second-background-color;
-
-    @media (min-width: @tablet-width) {
-      display: none;
+  @media (min-width: @tablet-width) {
+    &:hover {
+      color: @primary-color;
     }
+  }
+}
+
+.pagination-list__link--current {
+  &::before {
+    background-color: @five-background-color;
+  }
+}
+
+.pagination-list__span--current {
+  @media (min-width: @tablet-width) {
+    color: @primary-color;
   }
 }

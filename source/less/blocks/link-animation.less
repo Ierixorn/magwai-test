@@ -1,0 +1,30 @@
+.link-animation {
+  @media (min-width: @desktop-width) {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+}
+
+.link-animation__span {
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s;
+
+    &::before {
+      position: absolute;
+      top: 100%;
+      content: attr(data-hover);
+      transform: translate3d(0, 0, 0);
+      color: @six-color;
+    }
+  }
+}
+
+.link-animation:hover .link-animation__span,
+.link-animation:active .link-animation__span {
+  @media (min-width: @desktop-width) {
+    transform: translateY(-100%);
+  }
+}

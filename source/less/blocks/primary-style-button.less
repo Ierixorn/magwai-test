@@ -25,6 +25,23 @@
     background-color: @second-background-color;
   }
 
+  @media (min-width: @tablet-width) {
+    &:hover {
+      background-color: @five-background-color;
+      transition: background-color 2s ease-out;
+    }
+
+    &:hover::after {
+      background-color: @six-background-color;
+      transition: background-color 2s ease-out;
+    }
+
+    &:hover .primary-style-button__inside {
+      color: @second-color;
+      transition: background-color 2s ease-out;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     width: 264px;
   }

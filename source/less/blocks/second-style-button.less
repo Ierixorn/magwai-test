@@ -10,6 +10,12 @@
   text-align: center;
   background-color: @fourth-background-color;
 
+  &:hover {
+    background-color: @five-background-color;
+    color: @second-color;
+    transition: color, background-color 2s ease-out;
+  }
+
   @media (max-width: @mobile-width-only) {
     padding-right: 52px;
     padding-left: 52px;

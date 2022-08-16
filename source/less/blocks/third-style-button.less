@@ -1,0 +1,22 @@
+.third-style-button {
+  background-color: @primary-background-color;
+  transform: @main-skewX;
+  border: 1px solid fade(@primary-color, 50%);
+
+  &:hover .third-style-button__svg {
+    fill: @second-color;
+    transition: fill 1.9s ease-out;
+  }
+
+  &:hover {
+    background-color: @five-background-color;
+    border-color: @five-background-color;
+    transition: background-color, border-color 2s ease-out;
+  }
+}
+
+.third-style-button__svg {
+  display: inline-block;
+  transform: @second-skewX;
+  fill: fade(@primary-color, 50%);
+}

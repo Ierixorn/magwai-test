@@ -12,6 +12,10 @@
   border: 1px solid fade(@primary-color, 30%);
   background-color: @seven-background-color;
 
+  &:hover {
+    outline: 1px solid @primary-color;
+  }
+
   &:valid ~ .input-wrapper__span,
   &:focus ~ .input-wrapper__span {
     font-size: 12px;

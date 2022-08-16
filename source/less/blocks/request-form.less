@@ -9,24 +9,33 @@
   display: flex;
   flex-direction: column;
   padding-top: 86px;
-  padding-right: 49px;
-  padding-left: 130px;
   padding-bottom: 136px;
   transform: skewX(5deg);
 
+  @media (min-width: @tablet-width) {
+    width: auto;
+    padding-right: 49px;
+    padding-left: 67px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 724px;
+    padding-right: 49px;
+    padding-left: 130px;
     margin-left: auto;
   }
 }
 
 .request-form__background-wrapper {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   background-color: @seven-background-color;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .request-form__background-img {
@@ -37,39 +46,36 @@
 
 .request-form__title {
   margin: 0;
+  margin-bottom: 20px;
+  font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 20px;
     font-size: 42px;
     line-height: 51px;
   }
 }
 
 .request-form__close-button {
-  @media (min-width: @desktop-width) {
-    position: absolute;
+  position: absolute;
+
+  @media (min-width: @tablet-width) {
     right: 51px;
+    top: 65px;
+    width: 70px;
+    height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
     top: 76px;
     width: 86px;
     height: 70px;
-    transform: skewX(-20deg);
-    background-color: @primary-background-color;
-    border: 1px solid fade(@primary-color, 30%);
-
-    & svg {
-      transform: skewX(20deg);
-    }
   }
 }
 
-.request-form__close-button-svg {
-  fill: fade(@primary-color, 30%);
-}
-
 .request-form__description {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     margin-bottom: 50px;
   }
 }
@@ -77,7 +83,7 @@
 .request-form__input-wrapper {
   position: relative;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     margin-bottom: 20px;
   }
 }
@@ -89,12 +95,19 @@
 .request-form__user-agreement {
   margin: 0;
   white-space: pre-line;
+  color: fade(@primary-color, 30%);
 
   & a {
     color: inherit;
   }
 
-  @media (min-width: @desktop-width) {
+  & a:hover {
+    color: @primary-color;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 21px;
     margin-left: 48px;
   }
 }

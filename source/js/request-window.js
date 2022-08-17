@@ -8,7 +8,7 @@ const removeClass = () => {
 const closeWindow = () => {
   requestWindow.classList.remove('site-body__modal-wrapper--fade-in')
   requestWindow.classList.add('site-body__modal-wrapper--fade-out');
-  setTimeout(removeClass, 2000)
+  setTimeout(removeClass, 1505)
   requestWindow.classList.add('site-body__modal-wrapper--closed');
   closeButton.removeEventListener('click', closeWindow);
 }

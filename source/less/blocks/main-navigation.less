@@ -1,8 +1,27 @@
+.main-navigation__wrapper {
+  padding: 10px 25px;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 40px;
+  }
+}
+
 .main-navigation__list {
   .mixin-list-normalize();
+  margin-bottom: 51px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+.main-navigation__buttons-wrapper {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }

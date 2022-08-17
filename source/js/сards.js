@@ -12,7 +12,9 @@ const createNewsCard = (data) => {
     const newCard = cardTemplate.cloneNode(true);
 
     newCard.querySelector('img').src = element.image;
+    newCard.querySelector('.card__description').textContent = element.text;
     newCard.querySelector('b').textContent = element.author;
+    newCard.querySelector('#post-date').textContent = element.date;
 
     newCard.classList.add('cards-list__item--fade-in')
 
@@ -43,6 +45,6 @@ showMoreButton.addEventListener('click', (evt) => {
       unblockShowMoreButton();
   },
     () => {
-      return console.log('пиздец');
+      console.log('пиздец');
   },)
 })

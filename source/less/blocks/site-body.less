@@ -37,7 +37,7 @@
 }
 
 .site-body__modal-wrapper--fade-in {
-  animation: fadeIn ease-out 2s;
+  animation: fadeIn ease-out 1.5s;
 }
 
 @keyframes fadeIn {
@@ -53,7 +53,7 @@
 }
 
 .site-body__modal-wrapper--fade-out {
-  animation: fadeOut ease-out 2s;
+  animation: fadeOut ease-out 1.5s;
 }
 
 @keyframes fadeOut {
@@ -70,10 +70,10 @@
 
 .site-body__request-form {
   position: relative;
-  transform: skewX(-5deg);
 
   @media (min-width: @tablet-width) {
     width: 650px;
+    transform: skewX(-5deg);
   }
 
   @media (min-width: @desktop-width) {

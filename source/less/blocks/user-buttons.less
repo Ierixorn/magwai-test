@@ -1,4 +1,8 @@
 .user-buttons {
+  @media (max-width: @mobile-width-only) {
+    flex-grow: 1;
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -13,9 +17,13 @@
   box-sizing: border-box;
   width: 73px;
   height: 60px;
-  margin-right: 31px;
   transform: @main-skewX;
   border: 1px solid fade(@primary-color, 50%);
+
+  @media (max-width: @mobile-width-only) {
+    width: 270px;
+    margin-bottom: 6px;
+  }
 
   @media (min-width: @tablet-width) {
     margin-right: 7px;
@@ -30,4 +38,12 @@
   display: inline-block;
   transform: @second-skewX;
   fill: fade(@primary-color, 50%);
+}
+
+.user-buttons__request-button.user-buttons__nav-request-button {
+  width: 250px;
+
+  &::after {
+    display: none;
+  }
 }

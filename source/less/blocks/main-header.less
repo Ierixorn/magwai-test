@@ -52,10 +52,31 @@
 }
 
 .main-header__navigation {
+  display: none;
+  position: absolute;
+  width: 320px;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: @primary-background-color;
+  z-index: 5;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    top: 41%;
+  }
+
   @media (min-width: @desktop-width) {
+    position: static;
+    display: block;
     width: 900px;
-    order: 2;
     margin-right: auto;
+    top: none;
+    left: none;
+    transform: none;
+    order: 2;
   }
 }
 
@@ -72,10 +93,6 @@
   }
 }
 
-.main-header__navigation--close {
-  display: none;
-
-  @media (min-width: @desktop-width) {
-    display: block;
-  }
+.main-header__navigation--open {
+  display: block;
 }

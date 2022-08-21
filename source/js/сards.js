@@ -4,6 +4,7 @@ import {saveData, getSavedData, getMaxData} from './save-http-data.js';
 const showMoreButton = document.querySelector('.cards-section__show-more-button');
 const template = document.querySelector('#card').content;
 const cardTemplate = template.querySelector('.cards-list__item');
+const showMoreInside = document.querySelector('.primary-style-button__inside');
 
 
 // создать карточку
@@ -25,12 +26,12 @@ const createNewsCard = (data) => {
 //Отключение и включение кнопки загрузить
 const blockShowMoreButton = () => {
   showMoreButton.disabled = true;
-  showMoreButton.textContent = 'Загружаю...';
+  showMoreInside.textContent = 'Загружаю...';
 };
 
 const unblockShowMoreButton = () => {
   showMoreButton.disabled = false;
-  showMoreButton.textContent = 'Загрузить еще';
+  showMoreInside.textContent = 'Загрузить еще';
 };
 
 //Загрузить данные и поместить карточки на страницу

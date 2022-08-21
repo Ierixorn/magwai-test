@@ -22,6 +22,14 @@
     color: fade(@primary-color, 30%);
     transform: translateY(-7px);
   }
+
+  &:valid {
+    outline: 2px solid @seven-color;
+  }
+
+  &:invalid {
+    outline: 1.5px solid @primary-color;
+  }
 }
 
 .input-wrapper__span {

@@ -5,15 +5,24 @@
 }
 
 .site-body__header {
+  position: fixed;
   display: flex;
   justify-content: center;
+  z-index: 5;
+  background-color: #131313;
 }
 
 .site-body__main {
+  margin-top: 70px;
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
+    margin-top: 92px;
     margin-bottom: 40px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 110px;
   }
 }
 
@@ -37,7 +46,7 @@
 }
 
 .site-body__modal-wrapper--fade-in {
-  animation: fadeIn ease-out 1.5s;
+  animation: fadeIn ease-out 0.4s;
 }
 
 @keyframes fadeIn {
@@ -53,7 +62,7 @@
 }
 
 .site-body__modal-wrapper--fade-out {
-  animation: fadeOut ease-out 1.5s;
+  animation: fadeOut ease-out 0.4s;
 }
 
 @keyframes fadeOut {

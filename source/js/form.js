@@ -1,6 +1,6 @@
 import {pristine} from './form-validation.js';
-import {sendSavedData} from './http.js';
-import {createSuccessMessage} from './messages.js';
+// import {sendSavedData} from './http.js';
+// import {createSuccessMessage} from './messages.js';
 
 const mainForm = document.querySelector('.request-form');
 
@@ -19,22 +19,23 @@ const unblockSubmitButton = () => {
 };
 
 
-submitButton.addEventListener('click', () => {
+mainForm.addEventListener('submit', () => {
+  evt.preventDefault();
   console.log('sss');
-  const isValid = pristine.validate();
+  // const isValid = pristine.validate();
 
-  if (isValid) {
-    blockSubmitButton();
-    sendSavedData(
-      () => {
-        createSuccessMessage();
-        unblockSubmitButton();
-      },
-      () => {
-        renderErrorMessage();
-        unblockSubmitButton();
-      },
-      new FormData(mainForm),
-    );
-  }
+  // if (isValid) {
+  //   blockSubmitButton();
+  //   sendSavedData(
+  //     () => {
+  //       createSuccessMessage();
+  //       unblockSubmitButton();
+  //     },
+  //     () => {
+  //       renderErrorMessage();
+  //       unblockSubmitButton();
+  //     },
+  //     new FormData(mainForm),
+  //   );
+  // }
 });

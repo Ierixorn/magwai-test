@@ -14,8 +14,6 @@ const closeWindow = () => {
 }
 
 document.body.addEventListener('click', (evt) => {
-  evt.preventDefault();
-
   if (evt.target.dataset.request === "open") {
     requestWindow.classList.remove('site-body__modal-wrapper--fade-out')
 

@@ -436,7 +436,7 @@
         <div class="request-form__input-wrapper request-form__input-wrapper-height input-wrapper">
           <input class="input-wrapper__input" type="text" name="user-name"
           minlength="2"
-          maxlength="100"
+          maxlength="30"
           required
           data-pristine-required-message="Введите имя"
           data-pristine-minlength-message="Длина поля не может быть меньше 2 символов"
@@ -444,20 +444,19 @@
           <span class="input-wrapper__span">Ваше имя*</span>
         </div>
         <div class="request-form__input-wrapper request-form__input-wrapper-height input-wrapper">
-          <input class="input-wrapper__input" type="text" name="user-email"
+          <input class="input-wrapper__input" type="email" name="user-email"
           required
           data-pristine-required-message="Введите email"
           data-pristine-email-message="Требуется правильное написание, пример - test@yandex.ru">
           <span class="input-wrapper__span">E-mail*</span>
         </div>
         <div class="request-form__input-wrapper request-form__input-wrapper-height input-wrapper">
-          <input class="input-wrapper__input" type="text" name="user-phone-number"
+          <input class="input-wrapper__input" type="tel" name="user-phone-number"
+          pattern="\+7\([0-9]{3}\)[0-9]{3}"
           required
-          minlength="17"
-          maxlength="17"
-          data-pristine-minlength-message="Введите телефон согласно примеру"
-          data-pristine-maxlength-message="Введите телефон согласно примеру"
-          data-pristine-required-message="Введите номер телефона">
+          data-pristine-pattern-message="Введите телефон согласно примеру"
+          data-pristine-required-message="Введите номер телефона"
+          data-pristine-minlength-message="Неа">
           <span class="input-wrapper__span">+7(__)-___-__-__</span>
         </div>
         <div class="request-form__input-wrapper request-form__textarea-wrapper-height input-wrapper">
